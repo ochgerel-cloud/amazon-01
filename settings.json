@@ -1,0 +1,39 @@
+{
+    "editor.fontSize": 16,
+    "editor.wordWrap": "on",
+    "explorer.openEditors.visible": 0,
+    "workbench.editor.highlightModifiedTabs": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 6,
+    "editor.fontFamily": "Fira Code, 'Courier New', monospace",
+    "editor.lineHeight": 30,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#333",
+    },
+    "explorer.sortOrder": "type",
+    "files.trimFinalNewlines": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }, 
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.associations": {
+        "*.css":"scss"
+    },
+    "liveServer.settings.donotVerifyTags": true,
+    "terminal.integrated.tabs.enabled": true,
+    "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+    "[php]": {
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+    "workbench.iconTheme": "vscode-icons",
+    "sync.gist": "5cdc53fbfaea62a376b3130d9ac696a7"
+}
