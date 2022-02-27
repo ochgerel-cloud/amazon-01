@@ -12,6 +12,7 @@ const fileUpload = require("express-fileupload");
 // Router оруулж ирэх
 const categoriesRoutes = require("./routes/categories");
 const booksRoutes = require("./routes/books");
+const UsersRoutes = require("./routes/users");
 
 // Config.env тохиргоог process.env рүү ачаалах
 dotenv.config({ path: "./config/config.env" });
@@ -34,6 +35,7 @@ app.use(logger);
 app.use(morgan("combined", { stream: accessLogStream }));
 app.use("/api/v1/categories", categoriesRoutes);
 app.use("/api/v1/books", booksRoutes);
+app.use("/api/v1/users", UsersRoutes);
 app.use(errorHandler);
 
 const server = app.listen(

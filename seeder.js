@@ -4,6 +4,8 @@ const colors = require("colors");
 const dotenv = require("dotenv");
 const Category = require("./models/category");
 const Book = require("./models/book");
+const User = require("./models/user");
+const user = require("./models/user");
 
 dotenv.config({ path: "./config/config.env" });
 
@@ -20,11 +22,15 @@ const categories = JSON.parse(
 const books = JSON.parse(
   fs.readFileSync(__dirname + "/data/book.json", "utf-8")
 );
+const users = JSON.parse(
+  fs.readFileSync(__dirname + "/data/user.json", "utf-8")
+);
 
 const importData = async () => {
   try {
     await Category.create(categories);
     await Book.create(books);
+    await User.create(users);
     console.log("Өгөгдлийг татаж дууслаа...".green.inverse);
   } catch (err) {
     console.log(err);
@@ -35,6 +41,7 @@ const deleteData = async () => {
   try {
     await Category.deleteMany();
     await Book.deleteMany();
+    await User.deleteMany();
     console.log("Бүх өгөгдлийг устгалаа...".red.inverse);
   } catch (err) {
     console.log(err);

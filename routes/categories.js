@@ -1,4 +1,5 @@
 const express = require("express");
+const { protect, authorize } = require("../middleware/protect");
 
 const {
   getCategories,
@@ -14,14 +15,15 @@ const { getCategoryBooks } = require("../controller/books");
 router.route("/:categoryId/books").get(getCategoryBooks);
 
 // /api/v1/categories
-router.route("/").get(getCategories).post(createCategory);
+router
+  .route("/")
+  .get(getCategories)
+  .post(protect, authorize("admin"), createCategory);
 
 router
   .route("/:id")
   .get(getCategory)
-  .put(updateCategory)
-  .delete(deleteCategory);
-
-// console.log(getCategories);
+  .put(protect, updateCategory)
+  .delete(protect, deleteCategory);
 
 module.exports = router;

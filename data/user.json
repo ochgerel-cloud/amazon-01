@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "6207ceadf0142ec8a315cce4",
+    "name": "bold",
+    "email": "bold@gmail.com",
+    "role": "operator",
+    "password": "bold"
+},
+{
+    "_id": "6207cf1331b1574273199072",
+    "name": "tsetseg",
+    "email": "tsetseg@gmail.com",
+    "role": "user",
+    "password": "tsetseg"
+},
+{
+    "_id": "6207cf3290b1fb03e8d7a270",
+    "name": "batgerel",
+    "email": "bat@gmail.com",
+    "role": "admin",
+    "password": "batgerel"
+}
+  ]
+  

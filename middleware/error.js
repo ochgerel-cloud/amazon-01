@@ -18,6 +18,11 @@ const errorHandler = (err, req, res, next) => {
     error.statusCode = 400;
   }
 
+  if (error.name === "JsonWebTokenError" && error.message === "invalid token") {
+    error.message = "Буруу токен дамжуулсан байна.";
+    error.statusCode = 400;
+  }
+
   res.status(err.statusCode || 500).json({
     success: false,
     error, //error: error, гэсэн үг юм шүү

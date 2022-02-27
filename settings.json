@@ -11,7 +11,7 @@
     "editor.fontFamily": "Fira Code, 'Courier New', monospace",
     "editor.lineHeight": 30,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#333",
+        "statusBar.background": "#333"
     },
     "explorer.sortOrder": "type",
     "files.trimFinalNewlines": true,
